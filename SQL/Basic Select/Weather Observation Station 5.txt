@@ -1,0 +1,11 @@
+(
+  select station.city, length(station.city)
+  from station 
+  order by length(station.city) asc, station.city limit 1
+)
+union all
+(
+  select station.city,length(station.city)
+  from station 
+  order by length(station.city) desc, station.city limit 1
+);
